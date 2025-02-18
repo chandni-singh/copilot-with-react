@@ -5,6 +5,7 @@ function Register() {
     username: "",
     email: "",
     password: "",
+    mobile: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -52,6 +53,16 @@ function Register() {
             id="password"
             name="password"
             value={formData.password}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="mobile">Mobile Number:</label>
+          <input
+            type="tel"
+            id="mobile"
+            name="mobile"
+            value={formData.mobile}
             onChange={handleChange}
           />
         </div>
