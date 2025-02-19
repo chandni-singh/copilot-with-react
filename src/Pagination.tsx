@@ -11,6 +11,26 @@ interface PaginationProps {
   itemsPerPage: number;
 }
 
+/**
+ * Pagination component to display a paginated list of items.
+ *
+ * @component
+ * @param {PaginationProps} props - The props for the Pagination component.
+ * @param {Array} props.items - The array of items to paginate.
+ * @param {number} props.itemsPerPage - The number of items to display per page.
+ *
+ * @returns {JSX.Element} The rendered Pagination component.
+ *
+ * @example
+ * const items = [
+ *   { id: 1, firstName: 'John', lastName: 'Doe' },
+ *   { id: 2, firstName: 'Jane', lastName: 'Doe' },
+ *   // more items...
+ * ];
+ * const itemsPerPage = 10;
+ *
+ * <Pagination items={items} itemsPerPage={itemsPerPage} />
+ */
 const Pagination: React.FC<PaginationProps> = ({ items, itemsPerPage }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(items.length / itemsPerPage);
